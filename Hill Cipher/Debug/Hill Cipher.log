@@ -1,0 +1,6 @@
+﻿  2019118024_Hill_Cipher.cpp
+C:\Users\jibae\source\repos\Hill Cipher\Hill Cipher\2019118024_Hill_Cipher.cpp(15,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jibae\source\repos\Hill Cipher\Hill Cipher\2019118024_Hill_Cipher.cpp(33,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jibae\source\repos\Hill Cipher\Hill Cipher\2019118024_Hill_Cipher.cpp(42,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jibae\source\repos\Hill Cipher\Hill Cipher\2019118024_Hill_Cipher.cpp(60,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Hill Cipher.vcxproj -> C:\Users\jibae\source\repos\Hill Cipher\Debug\Hill Cipher.exe
