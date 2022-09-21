@@ -18,5 +18,8 @@
     <ClCompile Include="2019118024_Hill_Cipher.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2019118024_Vigenere.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

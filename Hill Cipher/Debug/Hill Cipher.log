@@ -1,7 +1,8 @@
 ﻿  2019118024_Hill_Cipher.cpp
-C:\Users\whipbaek\source\repos\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(13,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\whipbaek\source\repos\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(45,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\whipbaek\source\repos\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(55,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\whipbaek\source\repos\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(95,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\whipbaek\source\repos\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(105,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  Hill Cipher.vcxproj -> C:\Users\whipbaek\source\repos\Hiil-Cipher-and-Vigenere\Debug\Hill Cipher.exe
+C:\Users\jibae\Projects\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(13,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jibae\Projects\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(89,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jibae\Projects\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(100,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jibae\Projects\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(122,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jibae\Projects\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(131,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jibae\Projects\Hiil-Cipher-and-Vigenere\Hill Cipher\2019118024_Hill_Cipher.cpp(145,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Hill Cipher.vcxproj -> C:\Users\jibae\Projects\Hiil-Cipher-and-Vigenere\Debug\Hill Cipher.exe
