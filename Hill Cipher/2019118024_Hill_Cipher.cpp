@@ -41,7 +41,8 @@ vector<vector<int>> makereversArr(string key) {
 	d = keyArr[1][1];
 
 	int temp = a * d - b * c;
-	if (temp% 2 == 0) {
+	//temp 가 26과 서로소가 아닐경우, 역원이 없다.
+	if (temp% 2 == 0 || temp%26 == 13) {
 		cout << "역원이 없습니다, 다른키를 사용하세요.\n";
 		exit(0);
 	}
