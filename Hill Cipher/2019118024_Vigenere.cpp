@@ -2,6 +2,8 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <fstream>
+
 using namespace std;
 
 string extractAlpha(string plaintext, vector<pair<int, bool>>& idxArr) {
@@ -84,8 +86,30 @@ string decryption(string plaintext, string key) {
 
 	return plaintext;
 }
+void funcstart() {
+	string plaintext;
+	string key;
+	string PATH = "C:\\Users\\jibae\\OneDrive\\바탕 화면\\testtext.txt";
+	ifstream file(PATH);
+	
+	if (file.is_open()) {
+		getline(file, plaintext);
+	}
+	else {
+		cout << "파일을 열 수 없습니다.\n";
+		return ;
+	}
+	cout << "plaintext : " << plaintext << '\n';
+	cout << "키를 입력하세요 : ";
+	cin >> key;
 
-int main(void) {
+	string en = encryption(plaintext, key);
+	cout << "en : " << en << '\n';
+
+	string de = decryption(en, key);
+	cout << "de : " << de << '\n';
+}
+void testfunc() {
 	string plaintext = "ZY";
 	string key = "BA";
 
@@ -94,6 +118,9 @@ int main(void) {
 
 	string de = decryption(en, key);
 	cout << "de : " << de << '\n';
+}
 
+int main(void) {
+	funcstart();
 	return 0;
 }

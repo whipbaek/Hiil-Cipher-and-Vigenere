@@ -2,6 +2,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <fstream>
 
 #define KEY_SZ 2 // 2 x 2 Matrix Key
 using namespace std;
@@ -74,6 +75,14 @@ vector<vector<int>> makereversArr(string key) {
 };
 // 암호화, padding 기능 추가해야함
 string encryption(string plaintext, string key) {
+
+	// text 길이가 홀수라면 padding 해줌 (3개의 X를 넣어줌)
+	if (plaintext.length() % 2) {
+		plaintext.push_back('X');
+		plaintext.push_back('X');
+		plaintext.push_back('X');
+	}
+
 	string result = plaintext; // 최종값이 들어갈 result
 	vector<pair<int, bool>> idxArr; // 알파벳의 위치와, 대소문자 여부 (true -> 대문자, false -> 소문자)
 	string alphatext = ""; // 알파벳만 추출
@@ -136,25 +145,42 @@ string decryption(string plaintext, string key) {
 			result[idxArr[i].first] = tolower((modArr[i] % 26) + 65);
 	}
 
+
+	//padding 여부 check
+	int len = result.length();
+	if (result[len - 1] == 'X' && result[len - 2] == 'X' && result[len - 3] == 'X') {
+		result.erase(result.end()-3, result.end());
+	}
+
 	return result;
 }
 
+void funcstart() {
+	string plaintext;
+	string key;
+	string PATH = "C:\\Users\\jibae\\OneDrive\\바탕 화면\\testtext.txt";
+	ifstream file(PATH);
 
-/*
-*   ***** caution *****
-* 
-*  Text : shortexample
-*  Key  : HILL
-* 
-*  Text vector = { s, h, o, r, t, .... e }
-* 
-*	Key Matrix = | H L |    Not | H I |  !!!!!
-*				 | I L |        | L L |  !!!!!
-*/
-int main(void) {
+	if (file.is_open()) {
+		getline(file, plaintext);
+	}
+	else {
+		cout << "파일을 열 수 없습니다.\n";
+		return;
+	}
+	cout << "plaintext : " << plaintext << '\n';
+	cout << "키를 입력하세요(4글자, 대문자 영어) : ";
+	cin >> key;
 
-	vector<string> texts = { "ATTACK","shortexample","A1T25TACK", "Lemonade"};
-	vector<string> keys = { "CDDG","HILL","CDDG", "DGEH"};
+	string en = encryption(plaintext, key);
+	cout << "en : " << en << '\n';
+
+	string de = decryption(en, key);
+	cout << "de : " << de << '\n';
+}
+void testfunc() {
+	vector<string> texts = { "ATTACK","shortexample","A1T25TACK", "Lemonade" };
+	vector<string> keys = { "CDDG","HILL","CDDG", "DGEH" };
 	for (int i = 0; i < texts.size(); i++) {
 		cout << "Original Text : " << texts[i] << "\n";
 		string entext = encryption(texts[i], keys[i]);
@@ -165,6 +191,22 @@ int main(void) {
 		cout << "Decryption : " << detext << "\n\n";
 		cout << "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n";
 	}
+}
 
+/*
+*   ***** caution *****
+* 
+*  Text : shortexample
+*  Key  : HILL
+* 
+*  Text vector = { s, h, o, r, t, .... e }
+* 
+*	Key Matrix = | H L |    Not | H I |  !!!!!
+*                | I L |        | L L |  !!!!!
+*/
+int main(void) {
+
+	funcstart();
 	return 0;
+
 }
